@@ -40,8 +40,6 @@ class Track(models.Model):
     artist = models.CharField(max_length=255, blank=True, null=True)
     cover_url = models.URLField(blank=True, null=True)
     external_url = models.URLField(blank=True, null=True)
-    duration = models.IntegerField(blank=True, null=True)
-    metadate = models.JSONField(default=dict, blank=True)
 
     class Meta:
         unique_together = ('source_type', 'source_id')
